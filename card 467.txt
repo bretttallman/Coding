@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html data-require="math math-format"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Identifying coefficients in binomial expansions</title>
+    <script src="../khan-exercise.js"></script>
+    <style type="text/css">
+        #solutionarea td {
+            text-align: center;
+            vertical-align: middle;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+        #solutionarea .soln-top {
+            padding-bottom: 1px;
+        }
+        #solutionarea .soln-bot {
+            padding-top: 1px;
+            border-top: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="exercise">
+        <div class="vars">
+        </div>
+
+        <div class="problems">
+            <div id="Simple Binomial Expansion Coefficients">
+			<!-- This problem tests ability to identify coefficients for low order binomial distributions>
+				<div class="vars>
+					<var id="N">randRange(2,3)</var>
+					<var id="K">randRange(0,N)</var>
+				</div>
+                <p class="problem">For the equation (X + Y)<sup><code><var>N</var><code></sup>,</p>
+            	<p class="question">
+                    <p>What is the coefficient in front of the X<sup><code><var>N-K</var></code></sup> * Y<sup><code><var>K</var></code></sup> term <code>b</code>?</p>
+				<p class="solution" data-type="number">
+					<p><code>(N! / (K! * (N - K)!))</code></p>
+				<div class="hints">
+					<p>You may multiply the binomial term out, use the definition of a Combination, or use Pascal's triangle to solve this question. </p>
+					<p>If we use the Combination definition, n === <code>N</code> and k === <code>K</code>,</p>  
+						<p>where N is the power of the binomial, and K is the power of the Y term.</p>
+					<p>If we use Pascal's triangle, we will look at line <code>N</code>.</p>
+					<p>From the Combination definition, we know the coefficient is N!/[K!(N-K)!].</p>
+					<p>The coefficient is N!/[K!(N-K)!] = <code>N!</code> / [(<code>N!</code>)(<code>(N-K)!</code>)] = <code>(N! / (K! * (N - K)!))</code></p>
+				</div>
+			</div>
+					
+				
+            <div id="Large Binomial Expansion Coefficients, End Terms">
+			<!-- This problem tests ability to identify first and last coefficients for binomial distributions>
+				<div class="vars>
+					<var id="N">randRange(4,14)</var>
+				</div>
+                <p class="problem">For the equation (X + Y)<sup><code><var>N</var><code></sup>,</p>
+            	<p class="question">
+                    <p>What is the coefficient in front of the Y<sup><code><var>N</var></code></sup> term <code>b</code>?</p>
+				</p>
+				<p class="solution" data-type="number">
+					<p>1</p>
+				</p>
+				<div class="hints">
+					<p>You may use Pascal's triangle or use Sal's crafty trick to solve this question. </p>
+					<p>If we use Pascal's triangle, we will look at line <code>N</code>.</p>
+					<p>From Pascal's triangle, the first and last terms have a coefficient of 1.</p>
+					<p>The coefficient 1.  We can also calculate this from the Combination definition, if n = <code>N</code> and k = 1.
+						<p> The coefficient is N!/[K!(N-K)!] = <code>N!</code> / [(<code>N!</code>)(1)] = 1</p>
+				</div>
+			</div>
+			
+			<div id="Large Binomial Expansion Coefficients, Middle Terms">
+			<!-- This problem tests ability to identify coefficients for higher order binomial distributions>
+				<div class="vars>
+					<var id="N">randRange(4,14)</var>
+					<var id="K">randRange(1,N-1)</var>
+				</div>
+                <p class="problem">For the equation (X + Y)<sup><code><var>N</var><code></sup>,</p>
+            	<p class="question">
+                    <p>What is the coefficient in front of the X<sup><code><var>N-K</var></code></sup> * Y<sup><code><var>K</var></code></sup> term <code>b</code>?</p>
+				</p>
+				<p class="solution" data-type="number">
+					<p><code>(N! / (K! * (N - K)!))</code></p>
+				</p>
+				<div class="hints">
+					<p>You may use the definition of a Combination, use Pascal's triangle, or use Sal's crafty trick to solve this question. </p>
+					<p>If we use the Combination definition, n = <code>N</code> and k = <code>K</code>,</p>  
+						<p>where N is the power of the binomial, and K is the power of the Y term.</p>
+					<p>If we use Pascal's triangle, we will look at line <code>N</code>.</p>
+					<p>From the Combination definition, we know the coefficient is N!/[K!(N-K)!].</p>
+					<p>The coefficient is N!/[K!(N-K)!] = <code>N!</code> / [(<code>N!</code>)(<code>(N-K)!</code>)] = <code>(N! / (K! * (N - K)!))</code></p>
+				</div>
+			</div>
+				
+			<div id="Large Binomial Expansion Terms, Middle Terms">
+			<!-- This problem tests ability to identify coefficients and exponents for higher order binomial distributions>
+				<div class="vars>
+					<var id="N">randRange(4,14)</var>
+					<var id="K">randRange(1,N-1)</var>
+				</div>
+                <p class="problem">For the equation (X + Y)<sup><code><var>N</var></code></sup>,</p>
+            	<p class="question">
+                    <p>For the <code>K</code>th term in the expanded binomial distribution,</p>
+					<p class="extra-info"><i>(Extra info: To clarify the order of terms, the 1st term is X<sup><vars>N</vars></sup>, 
+					the 2nd term is X<sup><var>N-1</var></sup> * Y, and so on...>
+						<p> What is the coefficient in front of the X and Y terms?</p>
+						<p> What is the X exponent?</p>
+						<p> What is the Y exponent</p>
+					</p>
+				</p>
+				<p class="solution" data-type="number">
+					<p><code>(N! / (K! * (N - K)!))</code></p>
+					<p>N</p>
+					<p>N-K</p>
+				</p>
+				<div class="hints">
+					<p>You may use the definition of a Combination, use Pascal's triangle, or use Sal's crafty trick to solve this question. </p>
+					<p>If we use the Combination definition, n = <code>N</code> and k = <code>K</code>,</p>  
+						<p>where N is the power of the binomial, and K is the power of the Y term.</p>
+					<p>If we use Pascal's triangle, we will look at line <code>N</code>.</p>
+					<p>From the Combination definition, we know the coefficient is N!/[K!(N-K)!].</p>
+					<p>The coefficient is N!/[K!(N-K)!] = <code>N!</code> / [(<code>N!</code>)(<code>(N-K)!</code>)] = <code>(N! / (K! * (N - K)!))</code></p>
+				</div>
+			</div>
+        </div>
+    </div>
+</body></html>
