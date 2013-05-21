@@ -1,5 +1,4 @@
 <\!DOCTYPE html>
-<weighted problem types, used \! for factorials, used inheritance for problems, added defn for factorial, and removed b var for solutions>
 <html data-require="math math-format subhints"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Identifying coefficients in binomial expansions</title>
